@@ -1,4 +1,5 @@
 import { Component,  OnInit } from '@angular/core';
+import { Logiciel } from '../logiciel';
 
 @Component({
   selector: 'app-logiciels',
@@ -6,11 +7,15 @@ import { Component,  OnInit } from '@angular/core';
   styleUrls: ['./logiciels.component.css']
 })
 export class LogicielsComponent implements OnInit {
+  logiciel: Logiciel = {
+    id: 1,
+    nom: "Ms-Excel"
+  };
 
   constructor() {}
 
   ngOnInit(): void {
 
   }
-  logiciel = "Ms-Excel"
+
 }
