@@ -1,4 +1,8 @@
-<h2>{{logiciel.nom}} </h2>
+<h2>{{logiciel.nom |uppercase}} </h2>
 <div><span>id:</span>{{logiciel.id}}</div>
-<div><span>nom:</span>{{logiciel.nom}}</div>
+
+<div>
+  <label for="nom">Logiciel : </label>
+  <input id="nom" [(ngModel)]="logiciel.nom" placeholder="nom">
+</div>
 
