@@ -1,8 +1,16 @@
-<h2>{{logiciel.nom |uppercase}} </h2>
-<div><span>id:</span>{{logiciel.id}}</div>
+<h2>Les Logiciels </h2>
+<ul>
+  <li *ngFor="let logiciel of logiciels ">
+    <button type="button" class="button">
+      <span class="badge">{{logiciel.id}}  </span>
+      <span class="nom">{{logiciel.nom}} </span>
+    </button>
+  </li>
+</ul>
+<!-- <div><span>id:</span>{{logiciel.id}}</div>
 
 <div>
   <label for="nom">Logiciel : </label>
   <input id="nom" [(ngModel)]="logiciel.nom" placeholder="nom">
-</div>
+</div> -->
 

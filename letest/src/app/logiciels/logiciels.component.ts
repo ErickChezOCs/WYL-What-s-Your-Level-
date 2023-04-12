@@ -1,5 +1,6 @@
 import { Component,  OnInit } from '@angular/core';
-import { Logiciel } from '../logiciel';
+//import { Logiciel } from '../logiciel';
+import { LOGICIELS } from '../liste-logiciels';
 
 @Component({
   selector: 'app-logiciels',
@@ -7,10 +8,7 @@ import { Logiciel } from '../logiciel';
   styleUrls: ['./logiciels.component.css']
 })
 export class LogicielsComponent implements OnInit {
-  logiciel: Logiciel = {
-    id: 1,
-    nom: "Ms-Excel"
-  };
+ logiciels = LOGICIELS;
 
   constructor() {}
 
