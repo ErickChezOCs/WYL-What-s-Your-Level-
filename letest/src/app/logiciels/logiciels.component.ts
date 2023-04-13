@@ -1,6 +1,7 @@
 import { Component,  OnInit } from '@angular/core';
 //import { Logiciel } from '../logiciel';
 import { LOGICIELS } from '../liste-logiciels';
+import { Logiciel } from '../logiciel';
 
 @Component({
   selector: 'app-logiciels',
@@ -8,12 +9,17 @@ import { LOGICIELS } from '../liste-logiciels';
   styleUrls: ['./logiciels.component.css']
 })
 export class LogicielsComponent implements OnInit {
- logiciels = LOGICIELS;
+logiciels = LOGICIELS;
+selectionLogiciel?: Logiciel;
 
   constructor() {}
 
   ngOnInit(): void {
 
+  }
+
+  onSelect(logiciel: Logiciel) : void {
+    this.selectionLogiciel = logiciel;
   }
 
 }
