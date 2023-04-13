@@ -1,1 +1,9 @@
-<p>detail-test works!</p>
+<div *ngIf="logiciel">
+    <h2>Détails Test : {{ logiciel.nom | uppercase}} </h2>
+    <div>id: {{ logiciel.id}} </div>
+    <div>
+      <label for="logiciel-nom">Nom Logiciel:</label>
+      <input id="logiciel-nom" [(ngModel)]="logiciel.nom" placeholder="nom">
+    </div>
+  </div>
+  <app-detail-test [logiciel]="selectionLogiciel"></app-detail-test>
